@@ -45,9 +45,9 @@
         compatible = "zmk,combos";
 
         Toggletest {
-            bindings = <&tog 1>;
-            key-positions = <35 30>;
-            layers = <0>;
+            bindings = <&tog 6>;
+            key-positions = <30>;
+            layers = <0 6>;
         };
     };
 
@@ -107,5 +107,15 @@
                             &kp K_MUTE       &kp C_PLAY_PAUSE  &kp C_STOP    &trans  &trans     &trans
             >;
         };
+
+        Assist {
+            bindings = <
+&trans    &trans    &trans     &trans                              &trans                                &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS        &kp C_AC_SCROLL_DOWN  &kp C_AC_SCROLL_UP  &kp C_KEYBOARD_INPUT_ASSIST_NEXT        &trans
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT                           &trans                                &kp LEFT_ARROW                              &kp DOWN              &kp UP_ARROW        &kp RIGHT                               &kp N1
+&trans    &trans    &trans     &trans                              &trans                                &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS_GROUP  &trans                &trans              &kp C_KEYBOARD_INPUT_ASSIST_NEXT_GROUP  &trans
+                    &kp DEL    &kp C_KEYBOARD_INPUT_ASSIST_CANCEL  &kp C_KEYBOARD_INPUT_ASSIST_ACCEPT    &trans                                      &trans                &kp ESC
+            >;
+        };
     };
 };
+
