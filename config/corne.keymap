@@ -51,6 +51,22 @@
         };
     };
 
+    macros {
+        ShiftTab: ShiftTab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT>;
+
+            label = "SHIFTTAB";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -108,12 +124,12 @@
             >;
         };
 
-        Assist {
+        WebAccessibility {
             bindings = <
-&trans    &trans    &trans     &trans                              &trans                                &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS        &kp C_AC_SCROLL_DOWN  &kp C_AC_SCROLL_UP  &kp C_KEYBOARD_INPUT_ASSIST_NEXT        &trans
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT                           &trans                                &kp LEFT_ARROW                              &kp DOWN              &kp UP_ARROW        &kp RIGHT                               &kp N1
-&trans    &trans    &trans     &trans                              &trans                                &kp C_KEYBOARD_INPUT_ASSIST_PREVIOUS_GROUP  &trans                &trans              &kp C_KEYBOARD_INPUT_ASSIST_NEXT_GROUP  &trans
-                    &kp DEL    &kp C_KEYBOARD_INPUT_ASSIST_CANCEL  &kp C_KEYBOARD_INPUT_ASSIST_ACCEPT    &trans                                      &trans                &kp ESC
+&trans    &trans    &trans     &trans     &trans    &ShiftTab       &trans     &trans        &kp TAB    &trans
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &trans
+&trans    &trans    &trans     &trans     &trans    &trans          &trans     &trans        &trans     &trans
+                    &trans     &trans     &trans    &kp ENTER       &kp SPACE  &kp ESC
             >;
         };
     };
