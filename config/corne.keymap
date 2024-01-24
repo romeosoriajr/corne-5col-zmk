@@ -41,7 +41,16 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        togglewebnav {
+            bindings = <&tog 6>;
+            key-positions = <30 35>;
+            require-prior-idle-ms = <500>;
+            layers = <0 6>;
+        };
+    };
 
     macros {
         ShiftTab: ShiftTab {
