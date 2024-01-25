@@ -41,16 +41,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        togglewebnav {
-            bindings = <&tog 6>;
-            key-positions = <30 35>;
-            require-prior-idle-ms = <500>;
-            layers = <0 6>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         ShiftTab: ShiftTab {
@@ -76,7 +67,7 @@
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
 &LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &kp FSLH
-                            &lt 3 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 4 SPACE    &lt 5 ESCAPE
+                            &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
         };
 
@@ -100,19 +91,10 @@
 
         Function {
             bindings = <
-&none     &none     &none      &none      &none     &kp PRINTSCREEN  &kp F7     &kp F8              &kp F9  &kp F12
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp SCROLLLOCK   &kp F4     &kp F5              &kp F6  &kp F11
-&none     &none     &none      &none      &none     &kp PAUSE_BREAK  &kp F1     &kp F2              &kp F3  &kp F10
-                    &trans     &trans     &trans    &kp TAB          &kp SPACE  &kp K_CONTEXT_MENU
-            >;
-        };
-
-        Nav {
-            bindings = <
-&kp PAGE_UP    &kp HOME      &kp UP_ARROW   &kp END         &kp INS          &none   &none      &none      &none     &none
-&kp PAGE_DOWN  &kp LEFT      &kp DOWN       &kp RIGHT       &kp CAPSLOCK     &none   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE  &kp C_AC_REDO    &none   &none      &none      &none     &none
-                             &kp DEL        &kp BACKSPACE   &kp RETURN       &trans  &trans     &trans
+&none     &none     &none      &none      &none     &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
+&none     &none     &none      &none      &none     &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10
+                    &trans     &trans     &trans    &trans           &trans  &trans
             >;
         };
 
@@ -125,12 +107,12 @@
             >;
         };
 
-        WebAccessibility {
+        Navigation {
             bindings = <
-&none     &none     &none      &none      &none     &ShiftTab       &none      &none         &kp TAB    &none
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &none
-&none     &none     &none      &none      &none     &none           &none      &none         &none      &none
-                    &trans     &trans     &trans    &kp ENTER       &kp SPACE  &kp ESC
+&none     &none     &none      &none      &none     &ShiftTab       &kp PAGE_DOWN  &kp PAGE_UP   &kp TAB    &none
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&none     &none     &none      &none      &none     &kp CAPSLOCK    &kp END        &kp HOME      &none      &none
+                    &trans     &trans     &trans    &trans          &trans         &trans
             >;
         };
     };
