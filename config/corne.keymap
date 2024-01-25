@@ -76,7 +76,7 @@
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
 &LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &kp FSLH
-                            &lt 3 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &kp SPACE      &lt 5 ESCAPE
+                            &lt 3 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 4 SPACE    &lt 5 ESCAPE
             >;
         };
 
