@@ -42,7 +42,7 @@
             hold-trigger-on-release;
         };
 
-        cmdgr: osx_window_cycle: {
+        cmdgr: osx_window_cycle {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
