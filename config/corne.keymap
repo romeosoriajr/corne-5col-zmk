@@ -47,7 +47,7 @@
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
             mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
+            #keep-mods = <(MOD_LGUI)>;
         };
 
     };
