@@ -42,12 +42,13 @@
             hold-trigger-on-release;
         };
 
+        #cycles through osx app windows
         cmdgr: osx_window_cycle {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp GRAVE>;
             mods = <(MOD_LGUI)>;
-            #keep-mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
     };
@@ -77,7 +78,7 @@
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
 &LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
-&kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &kp FSLH
+&kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
         };
