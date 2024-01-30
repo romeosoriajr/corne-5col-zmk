@@ -42,7 +42,6 @@
             hold-trigger-on-release;
         };
 
-        #cycles through osx app windows
         cmdgr: osx_window_cycle {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
