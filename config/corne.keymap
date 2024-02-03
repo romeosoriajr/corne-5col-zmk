@@ -100,7 +100,7 @@
         Base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
-&GuiMT LGUI A  &LHRM LALT S  &LHRM LCTRL D  &ShiftMT LSHFT F    &kp G          &kp H    &ShiftMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &GuiMT RGUI SQT
+&GuiMT LGUI A  &LHRM LALT S  &LHRM LCTRL D  &ShiftMT LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &GuiMT RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
