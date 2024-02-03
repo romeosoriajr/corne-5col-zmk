@@ -16,6 +16,21 @@
     chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
+
+        /* testing: shorter tapping term for homerow shift. */
+        ShortMT: ShortMT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ShortMT";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 15 25 33 34 35 27 26 6 7 8 9 16 17 18 19 29 28 30 31 32>;
+            hold-trigger-on-release;
+        };
+
         LHRM: LHRM {
             compatible = "zmk,behavior-hold-tap";
             label = "LHRM";
@@ -76,7 +91,7 @@
         Base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
-&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
+&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &ShortMT LSHFT F    &kp G          &kp H    &ShortMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
