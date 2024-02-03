@@ -16,19 +16,28 @@
     chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
-
-        /* testing: adjusting accidental gui toggles */
-        ShortMT: ShortMT {
+        /* Testing: adjust this for preferring shift+kp versus kp+kp*/
+        ShiftMT: ShiftMT {
             compatible = "zmk,behavior-hold-tap";
-            label = "ShortMT";
+            label = "ShiftMT";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "hold-preferred";
+        };
+
+        /* Settings for accidental GUI triggering */
+        GuiMT: GuiMT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GuiMT";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <5 15 25 33 34 35 27 26 6 7 8 9 16 17 18 19 29 28 30 31 32>;
-            hold-trigger-on-release;
         };
 
         LHRM: LHRM {
@@ -91,7 +100,7 @@
         Base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
-&ShortMT LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &ShortMT RGUI SQT
+&GuiMT LGUI A  &LHRM LALT S  &LHRM LCTRL D  &ShiftMT LSHFT F    &kp G          &kp H    &ShiftMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &GuiMT RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
