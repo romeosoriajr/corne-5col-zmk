@@ -9,39 +9,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 &lt {
-    tapping-term-ms = <180>;
+    tapping-term-ms = <150>;
 };
 
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
-        LShiftMT: LShiftMT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LShiftMT";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <5 15 25 33 34 35 27 26 6 7 8 9 16 17 18 19 29 28 30 31 32>;
-            hold-trigger-on-release;
-        };
-
-        RShiftMT: RShiftMT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RShiftMT";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35>;
-            hold-trigger-on-release;
-        };
-
         LHRM: LHRM {
             compatible = "zmk,behavior-hold-tap";
             label = "LHRM";
@@ -102,7 +76,7 @@
         Base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
-&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LShiftMT LSHFT F    &kp G          &kp H    &RShiftMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
+&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RHRM RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
