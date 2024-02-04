@@ -3,10 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+
 
 &lt {
     tapping-term-ms = <180>;
@@ -16,25 +16,12 @@
     chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
-        lh_pht: lh_pht {
-            compatible = "zmk,behavior-hold-tap";
-            label = "lh_pht";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
-            flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <5 15 25 33 34 35 27 26 6 7 8 9 16 17 18 19 29 28 30 31 32>;
-            hold-trigger-on-release;
-        };
-
         LShiftMT: LShiftMT {
             compatible = "zmk,behavior-hold-tap";
             label = "LShiftMT";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
@@ -47,7 +34,7 @@
             label = "RShiftMT";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
@@ -115,7 +102,7 @@
         Base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T          &kp Y    &kp U          &kp I          &kp O         &kp P
-&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &lh_pht LSHFT F    &kp G          &kp H    &RShiftMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
+&LHRM LGUI A  &LHRM LALT S  &LHRM LCTRL D  &LHRM LSHFT F    &kp G          &kp H    &RShiftMT RSHFT J  &RHRM RCTRL K  &RHRM RALT L  &RHRM RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B          &kp N    &kp M          &kp COMMA      &kp DOT       &cmdgr
                             &lt 5 DELETE   &lt 1 BACKSPACE  &lt 2 ENTER    &kp TAB  &lt 3 SPACE    &lt 4 ESCAPE
             >;
