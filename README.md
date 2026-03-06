@@ -109,7 +109,7 @@ Two custom hold-tap behaviors to reduce misfires:
 | Behavior | Used for | Flavor | Tapping term | Prior idle |
 |----------|----------|--------|-------------|------------|
 | `LHRM` / `RHRM` | GUI, Alt, Ctrl | tap-preferred | 280ms | 150ms |
-| `LShiftMT` / `RShiftMT` | Shift | balanced | 175ms | 100ms |
+| `LShiftMT` / `RShiftMT` | Shift | balanced | 175ms | — |
 
 Both use positional hold triggers (opposite-hand activation only) and `hold-trigger-on-release`.
 
