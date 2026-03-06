@@ -64,7 +64,7 @@ Miryoku-inspired layout with 6 layers. Layers are accessed via hold on the thumb
 
 ```
 ┌─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┐
-│ Mic │     │     │     │     │   │PrtSc│ F7  │ F8  │ F9  │ F12 │
+│ Mic │     │     │     │Claude│   │PrtSc│ F7  │ F8  │ F9  │ F12 │
 ├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┤
 │ GUI │ ALT │ CTL │ SFT │     │   │ScrLk│ F4  │ F5  │ F6  │ F11 │
 ├─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┤
@@ -109,7 +109,7 @@ Two custom hold-tap behaviors to reduce misfires:
 | Behavior | Used for | Flavor | Tapping term | Prior idle |
 |----------|----------|--------|-------------|------------|
 | `LHRM` / `RHRM` | GUI, Alt, Ctrl | tap-preferred | 280ms | 150ms |
-| `LShiftMT` / `RShiftMT` | Shift | balanced | 175ms | 150ms |
+| `LShiftMT` / `RShiftMT` | Shift | balanced | 175ms | 100ms |
 
 Both use positional hold triggers (opposite-hand activation only) and `hold-trigger-on-release`.
 
